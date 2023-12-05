@@ -90,6 +90,8 @@ a {
   max-width: 1200px;
   padding: 0 2rem;
   margin: auto;
+  position: relative;
+  z-index: 2;
 }
 
 #header .navbar ul {
@@ -117,20 +119,8 @@ a {
   max-width: 1200px;
   margin: auto;
   padding: 5rem 2rem;
-}
-
-#header::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgb(0, 0, 0, 0.6);
-}
-
-#header * {
-  z-index: 1;
+  position: relative;
+  z-index: 2;
 }
 
 #header .header-content .col {
@@ -157,6 +147,17 @@ a {
 #header .header-content img,
 #offer .row img {
   max-width: 100%;
+}
+
+#header .overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 /* Header End */
@@ -271,3 +272,89 @@ a {
 }
 
 /* Books End */
+
+/* Blog Start */
+#blogs {
+  padding: 5rem 0;
+  background: url("../images/blog-bg.jpeg") no-repeat center center/cover fixed;
+  position: relative;
+}
+
+#blogs .blog-content {
+  position: relative;
+  z-index: 2;
+}
+
+#blogs span {
+  display: block;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+}
+
+#blogs h2 {
+  color: #fff;
+  margin-top: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+
+#blogs .blog-content .row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3rem;
+  margin-top: 4rem;
+}
+
+#blogs .blog-content .row .col {
+  background-color: #fff;
+  padding: 20px;
+}
+
+#blogs .blog-content .row .col h3 {
+  font-size: 16px;
+  margin: 10px 0;
+  color: var(--black);
+}
+
+#blogs .blog-content .row .col p {
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--light-gray);
+}
+
+#blogs .blog-content .row .col a {
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 12px;
+  color: var(--black);
+  font-weight: 700;
+}
+
+#blogs .blog-content .btn {
+  display: block;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 18px;
+}
+
+#blogs .blog-content .row img {
+  width: 100%;
+}
+
+#blogs .blog-content .row img:hover {
+  zoom: 3;
+}
+
+#blogs .overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+
+/* Blog End */
