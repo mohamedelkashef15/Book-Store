@@ -5,12 +5,17 @@
   --light-gray: #777;
   --black: #222;
   --bg-footer: #111;
+  --bg-light-white: #f4f4f4;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -38,8 +43,9 @@ a {
 
 .btn {
   display: inline-block;
-  padding: 15px 30px;
+  padding: 12px 30px;
   font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .btn-primary {
@@ -47,14 +53,24 @@ a {
   color: #fff;
 }
 
+.btn-primary:hover {
+  background-color: rgb(103, 221, 67);
+}
+
 .btn-secondary {
-  background: var(--light-gray);
+  background: rgba(119, 119, 119, 0.3);
   color: #fff;
+}
+
+.btn-secondary:hover {
+  background: rgba(119, 119, 119, 0.5);
 }
 
 /* Header Start */
 #header {
-  background: url("../images/bg-home.avif") no-repeat center center/cover;
+  background: url("../images/bg-home.avif") no-repeat center center/cover fixed;
+  min-height: 100vh;
+  position: relative;
 }
 
 #header .navbar {
@@ -74,6 +90,13 @@ a {
 #header .navbar ul li a {
   color: #fff;
   margin: 0 15px;
+  padding-bottom: 15px;
+  transition: all 0.5s ease;
+}
+
+#header .navbar ul li a:hover {
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--light-green);
 }
 
 #header .header-content {
@@ -127,3 +150,40 @@ a {
 }
 
 /* Header End */
+
+/* Author Start */
+#author {
+  padding: 3rem 0;
+}
+
+#author .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 5rem;
+}
+
+#author .row .author-content span {
+  color: var(--light-green);
+  font-weight: 700;
+  font-size: 20px;
+}
+
+#author .row .author-content h2 {
+  margin: 10px 0;
+  font-size: 45px;
+  color: var(--black);
+}
+
+#author .row .author-content p {
+  margin: 20px 0;
+  font-size: 14px;
+  color: var(--light-gray);
+  line-height: 1.7;
+}
+
+#author .row img {
+  max-width: 350px;
+}
+
+/* Author End */
