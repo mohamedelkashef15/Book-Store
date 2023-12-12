@@ -5,7 +5,7 @@
   --light-gray: #777;
   --black: #222;
   --bg-footer: #111;
-  --bg-light-white: #f4f4f4;
+  --bg-white: #f6f6f6;
 }
 
 * {
@@ -33,6 +33,7 @@ a {
 p {
   color: var(--light-gray);
   font-size: 14px;
+  line-height: 1.6;
 }
 
 /* Utility classes */
@@ -74,10 +75,11 @@ p {
 .btn-third {
   color: var(--light-green);
   transition: all 0.3s ease;
+  font-weight: 700;
 }
 
 .btn-third:hover {
-  transform: translateX(10px);
+  transform: translateX(5px);
 }
 
 .title {
@@ -211,7 +213,6 @@ p {
 
 #author .row .author-content p {
   margin: 20px 0;
-  line-height: 1.7;
 }
 
 #author .row img {
@@ -256,7 +257,6 @@ p {
 
 #offer .row .col p {
   margin-top: 3rem;
-  line-height: 1.6;
 }
 
 #offer .row img,
@@ -327,10 +327,6 @@ p {
   color: var(--black);
 }
 
-#blogs .blog-content .row .col p {
-  line-height: 1.4;
-}
-
 #blogs .blog-content .row .col a {
   display: inline-block;
   margin-top: 15px;
@@ -381,7 +377,8 @@ p {
 }
 
 #events .row .col span,
-#events .row .col small {
+#events .row .col small,
+#reviews .row .col small {
   font-weight: 700;
 }
 
@@ -400,3 +397,39 @@ p {
 }
 
 /* Events End */
+/* Reviews Start */
+#reviews {
+  padding: 6rem 0;
+  background-color: var(--bg-white);
+  text-align: center;
+}
+
+#reviews .row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3rem;
+  margin-top: 5rem;
+}
+
+#reviews .row .col img {
+  width: 80px;
+  border-radius: 50%;
+}
+
+#reviews .row .col h3 {
+  color: var(--light-green);
+  margin: 10px 0;
+}
+
+#reviews .row .col p {
+  margin-top: 20px;
+  font-style: italic;
+}
+
+#reviews .btn {
+  margin-top: 3rem;
+}
+
+
+
+/* Reviews End */
