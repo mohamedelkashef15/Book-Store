@@ -448,3 +448,96 @@ p {
 }
 
 /* Discover End */
+
+/* Footer Start */
+/* Footer top start */
+#footer .footer-top {
+  padding: 5rem 0;
+  background-color: var(--bg-footer);
+}
+
+#footer h2,
+#footer h3,
+#footer a {
+  color: #fff;
+}
+
+#footer .footer-top .row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr 1fr;
+  column-gap: 2rem;
+}
+
+#footer .footer-top .row h2 {
+  font-size: 20px;
+  margin-bottom: 2rem;
+}
+
+#footer .footer-top .row .col-1 .col-1-content {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+#footer .footer-top .row .col-1 .col-1-content p {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+#footer .footer-top .row .col-1 img {
+  width: 100px;
+  margin-right: 20px;
+}
+
+#footer .footer-top .row .col-2 ul li a,
+#footer .footer-top .row .col-4 ul li a {
+  display: inline-block;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+#footer .footer-top .row .col-2 ul li a:hover,
+#footer .footer-top .row .col-4 ul a:hover {
+  color: var(--light-green);
+}
+
+#footer .footer-top .row .col-3 .book {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .row .col-3 .book h3 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#footer .footer-top .row .col-3 img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+#footer .footer-top .row .col-4 ul li i {
+  margin-right: 5px;
+}
+
+/* Footer top end */
+
+/* Copyright start */
+#footer .copyright {
+  padding: 2rem 0;
+  text-align: center;
+  background-color: var(--bg-footer);
+  border-top: 1px solid var(--light-gray);
+}
+
+#footer .copyright a {
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+#footer .copyright a:hover {
+  color: var(--light-green);
+}
+
+/* Copyright end */
+/* Footer End */
