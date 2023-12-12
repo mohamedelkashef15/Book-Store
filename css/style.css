@@ -51,6 +51,8 @@ p {
   display: inline-block;
   padding: 12px 30px;
   font-weight: 600;
+  border: none;
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 
@@ -180,7 +182,8 @@ p {
 }
 
 #header .header-content .overlay,
-#books-page .overlay {
+#books-page .overlay,
+#contact-page .overlay {
   content: "";
   position: absolute;
   top: 0;
@@ -466,7 +469,8 @@ p {
 /** Books Page Start*/
 /* Header content start */
 
-#books-page .header-content {
+#books-page .header-content,
+#contact-page .header-content {
   min-height: 35vh;
   background: url("../images/bg-food.jpeg") no-repeat center center/cover fixed;
   display: flex;
@@ -476,7 +480,8 @@ p {
   z-index: 1;
 }
 
-#books-page .header-content h1 {
+#books-page .header-content h1,
+#contact-page .header-content h1 {
   color: #fff;
   font-size: 40px;
   margin-top: 5rem;
@@ -493,6 +498,64 @@ p {
 /* All Books end */
 
 /** Books Page End*/
+
+/** Contact Page Start  */
+/* Info start */
+#info {
+  padding: 6rem 0;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+#info .row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#info .row i {
+  font-size: 40px;
+  color: var(--light-green);
+}
+
+#info .row .col h2 {
+  font-size: 16px;
+  margin: 20px 0 5px;
+}
+
+#info .row .col p {
+  margin-bottom: 5px;
+}
+
+/* Info end */
+/* contact start */
+#contact {
+  background-color: var(--bg-white);
+  text-align: center;
+  padding: 6rem 0;
+}
+
+#contact .contact-content {
+  max-width: 700px;
+  margin: auto;
+}
+
+#contact .contact-content p {
+  margin: 10px 0 30px;
+}
+
+#form input,
+#form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  outline-color: var(--light-green);
+}
+
+/* contact end */
+/** Contact Page End  */
 
 /* Footer Start */
 /* Footer top start */
