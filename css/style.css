@@ -187,7 +187,6 @@ p {
 #header .header-content .overlay,
 #books-page .overlay,
 #contact-page .overlay {
-  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -205,33 +204,34 @@ p {
 }
 
 #author .row {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   column-gap: 2rem;
 }
 
-#author .row .author-content span {
+#author .row .col span {
   font-weight: 700;
   font-size: 20px;
 }
 
-#author .row .author-content {
+#author .row .col {
   max-width: 600px;
 }
 
-#author .row .author-content h2 {
+#author .row .col h2 {
   margin: 10px 0;
   font-size: 45px;
   color: var(--black);
 }
 
-#author .row .author-content p {
+#author .row .col p {
   margin: 20px 0;
 }
 
 #author .row img {
   max-width: 350px;
+  justify-self: end;
 }
 
 /* Author End */
@@ -672,10 +672,16 @@ p {
 
   #header .header-content .col .links a {
     margin-bottom: 20px;
+    margin-right: 0;
   }
 
   #author .row {
-    flex-direction: column-reverse;
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+
+  #author .row img {
+    justify-self: center;
   }
 
   #offer .row {
