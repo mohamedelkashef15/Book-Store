@@ -149,6 +149,7 @@ p {
 #header .header-content .row {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  column-gap: 20px;
   align-items: center;
   justify-content: center;
   min-height: 110vh;
@@ -166,14 +167,16 @@ p {
 }
 
 #header .header-content .col span {
-  display: block;
   font-weight: 300;
   font-size: 40px;
 }
 
-#header .header-content .col a {
+#header .header-content .col .links {
   margin-top: 3rem;
-  margin: 3rem 20px 0 0;
+}
+
+#header .header-content .col .links a {
+  margin-right: 20px;
 }
 
 #header .header-content img,
@@ -263,6 +266,8 @@ p {
 }
 
 #offer .row .col a {
+  /* because of second link */
+  display: inline-block;
   margin-top: 20px;
   font-size: 14px;
 }
@@ -538,6 +543,7 @@ p {
 #contact .contact-content {
   max-width: 700px;
   margin: auto;
+  padding: 0 2rem;
 }
 
 #contact .contact-content p {
@@ -649,3 +655,86 @@ p {
 
 /* Copyright end */
 /* Footer End */
+
+/* Responsive Start */
+@media (max-width: 800px) {
+  .navbar .logo {
+    width: 150px;
+  }
+
+  .navbar ul li a {
+    margin: 0 5px;
+  }
+
+  #header .header-content .col h1 {
+    font-size: 40px;
+  }
+
+  #header .header-content .col .links a {
+    margin-bottom: 20px;
+  }
+
+  #author .row {
+    flex-direction: column-reverse;
+  }
+
+  #offer .row {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+    text-align: left;
+  }
+
+  #offer .row .col span:first-child,
+  #offer .row .col .author,
+  #discover span {
+    font-size: 20px;
+  }
+
+  #offer .row .col h2,
+  #discover h2 {
+    font-size: 25px;
+  }
+
+  #blogs .blog-content .row {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+  }
+
+  #footer .footer-top .row {
+    grid-template-columns: 2fr 1fr;
+    row-gap: 3rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .navbar nav {
+    flex-direction: column;
+    padding: 20px 0;
+  }
+
+  .navbar .logo {
+    margin-bottom: 10px;
+  }
+
+  .navbar ul li a {
+    font-size: 12px;
+  }
+
+  #header .header-content .row {
+    grid-template-columns: 1fr;
+    padding: 8rem 0;
+  }
+
+  #books .row,
+  #blogs .blog-content .row,
+  #events .row,
+  #reviews .row,
+  #footer .footer-top .row,
+  #all-books .row,
+  #info .row {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+}
+
+/* Responsive End */
