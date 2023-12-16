@@ -585,7 +585,7 @@ p {
 /** Contact Page Start  */
 /* Info start */
 #info {
-  padding: 6rem 0;
+  padding: 6rem 2rem;
   max-width: 800px;
   margin: auto;
   text-align: center;
@@ -604,10 +604,6 @@ p {
 #info .row .col h2 {
   font-size: 16px;
   margin: 20px 0 5px;
-}
-
-#info .row .col p {
-  margin-bottom: 5px;
 }
 
 /* Info end */
