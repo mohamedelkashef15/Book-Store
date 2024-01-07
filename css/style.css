@@ -740,8 +740,7 @@ p {
   }
 
   #author .row img {
-    display: none;
-    width: 100px;
+    width: 200px;
     justify-self: center;
   }
 
