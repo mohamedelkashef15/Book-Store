@@ -126,6 +126,7 @@ p {
 .navbar .nav .nav-data .nav-toggle {
   color: #fff;
   opacity: 0;
+  display: none;
 }
 
 .navbar .nav .nav-data .nav-toggle i {
@@ -742,7 +743,6 @@ p {
     transition: all 0.3s ease;
   }
 
-  /* show menu */
   .navbar .nav .show-menu {
     opacity: 1;
   }
