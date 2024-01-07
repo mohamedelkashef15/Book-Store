@@ -17,15 +17,26 @@
   <!-- header start -->
   <header id="header">
     <div class="navbar">
-      <nav>
-        <a href="./index.html"><img src="./images/logo.webp" class="logo" alt="Jeremy Seven"></a>
-        <ul>
-          <li><a href="#author"><i class="fa-solid fa-circle-user"></i> Author</a></li>
-          <li><a href="#books"><i class="fa-solid fa-book"></i> Book Store</a></li>
-          <li><a href="#blogs"><i class="fa-solid fa-pen"></i> Blogs</a></li>
-          <li><a href="#events"><i class="fa-regular fa-calendar-check"></i> Events</a></li>
-          <li><a href="#reviews"><i class="fa-solid fa-message"></i> Reviews</a></li>
-        </ul>
+      <nav class="nav container">
+        <!-- nav data -->
+        <div class="nav-data">
+          <a href="./index.html"><img src="./images/logo.webp" class="logo" alt="Jeremy Seven"></a>
+          <!-- nav toggle -->
+          <div id="nav-toggle" class="nav-toggle">
+            <i class="fa-solid fa-bars nav-bars"></i>
+            <i class="fa-solid fa-xmark nav-close"></i>
+          </div>
+        </div>
+        <!-- nav menu -->
+        <div id="nav-menu" class="nav-menu">
+          <ul>
+            <li><a href="#author"><i class="fa-solid fa-circle-user"></i> Author</a></li>
+            <li><a href="#books"><i class="fa-solid fa-book"></i> Book Store</a></li>
+            <li><a href="#blogs"><i class="fa-solid fa-pen"></i> Blogs</a></li>
+            <li><a href="#events"><i class="fa-regular fa-calendar-check"></i> Events</a></li>
+            <li><a href="#reviews"><i class="fa-solid fa-message"></i> Reviews</a></li>
+          </ul>
+        </div>
       </nav>
     </div>
     <div class="header-content">
@@ -316,6 +327,9 @@
     </div>
   </footer>
   <!-- Footer End -->
+
+  <!-- JavaScript -->
+  <script src="./script.js"></script>
 </body>
 
 </html>

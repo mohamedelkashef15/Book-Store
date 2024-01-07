@@ -105,6 +105,55 @@ p {
 
 .navbar {
   position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  z-index: 4;
+}
+
+.navbar .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.navbar .nav .nav-data .logo {
+  width: 200px;
+}
+
+.navbar .nav .nav-data .nav-toggle {
+  color: #fff;
+  opacity: 0;
+}
+
+.navbar .nav .nav-data .nav-toggle i {
+  transition: all 0.3s ease;
+}
+
+.navbar .nav .nav-data .nav-toggle i.nav-close {
+  opacity: 0;
+}
+
+.navbar .nav .nav-menu ul {
+  display: flex;
+}
+
+.navbar .nav .nav-menu ul li a {
+  margin: 0 15px;
+  color: #fff;
+  padding-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.navbar .nav .nav-menu ul li a:hover {
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--light-green);
+}
+
+/* .navbar {
+  position: fixed;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 3;
@@ -138,7 +187,7 @@ p {
 .navbar ul li a:hover {
   padding-bottom: 5px;
   border-bottom: 2px solid var(--light-green);
-}
+} */
 
 #header .header-content {
   position: relative;
@@ -643,9 +692,75 @@ p {
     width: 150px;
   }
 
-  .navbar ul li a {
-    margin: 0 5px;
+  .navbar .nav .nav-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
   }
+
+  .navbar .nav .nav-data .nav-toggle {
+    display: block;
+    width: 35px;
+    height: 35px;
+    position: relative;
+    opacity: 1;
+  }
+
+  .navbar .nav .nav-data .nav-toggle i {
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    margin: auto;
+    inset: 0;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .navbar .nav .nav-data .nav-toggle i.nav-close {
+    transform: rotate(90deg);
+  }
+
+  .navbar .nav .nav-data .show-icon i.nav-bars {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+
+  .navbar .nav .nav-data .show-icon i.nav-close {
+    opacity: 1;
+    transform: rotate(90deg);
+  }
+
+  /* nav menu */
+  .navbar .nav .nav-menu {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  /* show menu */
+  .navbar .nav .show-menu {
+    opacity: 1;
+  }
+
+  .navbar .nav .nav-menu ul {
+    flex-direction: column;
+    background-color: #191919;
+  }
+
+  .navbar .nav .nav-menu ul li {
+    padding: 20px;
+    cursor: pointer;
+  }
+
+  .navbar .nav .nav-menu ul li:hover {
+    background-color: #4c4c4c;
+  }
+
 
   #header .header-content .col h1 {
     font-size: 40px;
@@ -687,14 +802,14 @@ p {
     row-gap: 2rem;
   }
 
-  #footer .footer-top .row {
+  #footer .footer-top {
     grid-template-columns: 2fr 1fr;
     row-gap: 3rem;
   }
 }
 
 @media (max-width: 650px) {
-  .navbar nav {
+  /* .navbar nav {
     flex-direction: column;
     padding: 20px 0;
   }
@@ -705,7 +820,7 @@ p {
 
   .navbar ul li a {
     font-size: 12px;
-  }
+  } */
 
   #header .header-content .row {
     grid-template-columns: 1fr;
@@ -716,7 +831,7 @@ p {
   #blogs .row,
   #events .row,
   #reviews .row,
-  #footer .footer-top .row,
+  #footer .footer-top,
   #all-books .row,
   #info .row {
     grid-template-columns: 1fr;
