@@ -105,8 +105,6 @@ p {
 
 .navbar {
   position: fixed;
-  top: 0;
-  left: 0;
   background-color: rgba(0, 0, 0, 0.9);
   width: 100%;
   z-index: 4;
@@ -116,7 +114,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  min-height: 80px;
 }
 
 .navbar .nav .nav-data .logo {
