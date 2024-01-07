@@ -241,7 +241,7 @@ p {
 }
 
 #author .row img {
-  max-width: 350px;
+  width: 350px;
   justify-self: end;
 }
 
@@ -740,6 +740,7 @@ p {
   }
 
   #author .row img {
+    width: 200px;
     justify-self: center;
   }
 
@@ -772,19 +773,6 @@ p {
 }
 
 @media (max-width: 650px) {
-  /* .navbar nav {
-    flex-direction: column;
-    padding: 20px 0;
-  }
-
-  .navbar .logo {
-    margin-bottom: 10px;
-  }
-
-  .navbar ul li a {
-    font-size: 12px;
-  } */
-
   #header .header-content .row {
     grid-template-columns: 1fr;
     padding: 8rem 0;
